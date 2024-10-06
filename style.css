@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@300;400;500;700&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in;
+    -webkit-font-smoothing: antialiased; /* Font smoothing for better readability */
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Alex Brush', cursive;
+    color: #fff;
+    font-size: 3rem;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #C6A961;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #008080;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #C6A961;
+    border-bottom: 3px solid #C6A961;
+}
+
+/* Mobile menu (hamburger) for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .hamburger.active + nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-family: 'Alex Brush', cursive;
+    color: #fff;
+}
+
+.home-content h1 span {
+    color: #ff0000;
+}
+
+.home-content p {
+    font-size: 2rem;
+    color: #C6A961;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.typing-text {
+    font-size: 2.4rem;
+    color: #C6A961;
+    margin: 20px 0;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 2.5rem;
+    color:#FF6347;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #C6A961;
+    transform: translateY(-3px); /* Adds a subtle hover animation */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: #4E8387;
+    color: #C6A961;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s;
+    border: 2px solid #B50D0D;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #B50D0D;
+    color: #fff;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.home-img img {
+    border-radius: 50%;
+    width: 400px;
+    border: 5px solid #C6A961;
+    transition: transform 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    color: #C6A961;
+    font-size: 1.4rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 0.05rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        margin-top: 20px;
+        width: 300px;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}

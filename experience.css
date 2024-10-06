@@ -1,0 +1,93 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Alex Brush', cursive;
+    color: #fff;
+    font-size: 3rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6347; /* Tomato color */
+}
+
+.nav-links .active {
+    color: #FF6347; /* Active state */
+}
+
+/* Experience Section */
+.experience {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.experience h1 {
+    font-size: 36px;
+    color: #6a89cc; /* Soft blue for heading */
+    margin-bottom: 30px;
+}
+
+.experience-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.experience-content p {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .experience h1 {
+        font-size: 28px;
+    }
+
+    .experience-content {
+        font-size: 16px;
+    }
+}
